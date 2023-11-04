@@ -1,0 +1,107 @@
+*{
+    /* للهوامش بين العناصر  */
+    margin: 0;
+    /* للهوامش الداخلية  */
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background : linear-gradient(#200016,#10001f);
+    font-family: system-ui;
+}
+a{
+    color: #fff;
+    /* عشان اشيل الخط يلي تحت الكلمة  */
+    text-decoration: none;
+    /* عشان اخليهم جنب بعض  */
+
+}
+header{
+    /* عشان اخلي الخلفية تظهر ورا الناف */
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    /* عشان يخليهم جنب بعض */
+    display: flex;
+    /* عشان يعمل سبيس بينهم */
+    justify-content: space-between;
+    /* عشان ينزل اللوجو  */
+    align-items: center;
+    /* محاذاة من جميع الجوانب  */
+  margin: 20px;
+}
+header .logo {
+    font-size: 30px ;
+    text-transform: uppercase;
+}
+header ul{
+    /* عشان يشيل النقاط تبعتهم */
+    list-style: none;
+    /* عشان اجيبهم جنب بعض */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* عشان اعمل سبيس بينهم */
+header ul li{
+    margin-right: 30px;
+}
+/* بدنا نعمل تأثير لما اجي اضغط على الكلمة  */
+header ul li a{
+    font-weight:bold;
+    padding: 6px 15px;
+    border-radius: 22px;
+}
+header ul li a:hover,.active {
+    background-color: #fff;
+    color: #200016;
+    transition: all 0.8s ease-in-out;
+
+}
+.main{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+.main::after{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top,#200016,transparent);
+}
+.main img{
+    position:absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+#moon{
+    mix-blend-mode:screen;
+    transform: translateY(50px);
+}
+.doaa{
+color: #fff;
+font-family: 'Cairo', sans-serif;
+text-align:center;
+font-size: 30px;
+transform: translateY(-150px);
+}
+.content{
+    color: #fff;
+    padding: 30px;
+}
+.content h2  {
+    margin: 20px;
+    font-size: 30px;
+}
+.content p {
+    margin: 20px;
+}
